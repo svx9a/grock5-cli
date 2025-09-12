@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Godot 4+ specific ignores
 .godot/
 .nomedia
@@ -14,3 +15,12 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
+=======
+node_modules/
+.env
+.DS_Store
+*.log
+.nyc_output
+coverage/
+.elasticbeanstalk/
+>>>>>>> cdcacc5 (FUCK YEAH: GROK5 CLI quantum shrine complete - Kris of Velrion forged!)
