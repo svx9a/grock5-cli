@@ -83,7 +83,7 @@ program
     const { exec } = require('child_process');
     console.log('🌑 AZURE GRIND: Channeling cloud fury...');
     if (options.shell) {
-      exec('xdg-open https://shell.azure.com/?shell=bash || start https://shell.azure.com/?shell=bash');
+      exec('start https://shell.azure.com/?shell=bash');
       console.log('⚡ Portal opened: Grind in Azure Cloud Shell!');
     } else {
       exec(`az ${command}`, (error, stdout, stderr) => {
