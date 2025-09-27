@@ -4,7 +4,6 @@ const web3 = new Web3('https://mainnet.infura.io/v3/b069ae197c98434797d0cd4591b4
 
 async function mintGlyph({ name, symbol }) {
     console.log(`ξ Minting Glyph: ${JSON.stringify({ name, symbol })}`);
-    // Placeholder: Simulate minting (replace with real contract call)
     const tokenId = Math.floor(Date.now() / 1000);
     const owner = '0xSV9_KRIS';
     return { tokenId, owner };

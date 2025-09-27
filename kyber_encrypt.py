@@ -8,6 +8,7 @@ class KyberEmulator:
         self.cipher = Fernet(self.key)
     
     def encrypt_file(self, input_file, output_file):
+        """Encrypt a quantum batch file"""
         try:
             with open(input_file, "rb") as f:
                 data = f.read()
@@ -20,6 +21,7 @@ class KyberEmulator:
             return None, None
     
     def save_key(self, key, filename):
+        """Save encryption key"""
         key_file = f"kyber_key_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.key"
         with open(key_file, "wb") as f:
             f.write(key)
@@ -29,9 +31,11 @@ if __name__ == "__main__":
     kyber = KyberEmulator()
     input_file = f"quantum_batch_{int(datetime.datetime.now().timestamp())}.js"
     output_file = f"encrypted_{input_file}"
+    
     if not os.path.exists(input_file):
         with open(input_file, "w") as f:
             f.write("// ξ-Quantum Batch\nconsole.log('Oversoul Active');")
+    
     key, encrypted_file = kyber.encrypt_file(input_file, output_file)
     if key:
         key_file = kyber.save_key(key, input_file)

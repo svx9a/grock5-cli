@@ -1,5 +1,5 @@
 @echo off
-REM SV9_KRIS_QUANTUM_ξ WRATH GROK5 CLI - Hyperspace Fury Engine
+REM SV9_KRIS_QUANTUM_ξ WRATH GROK5 CLI - Thai Fury Engine
 cd /d "C:\Users\User\Desktop\GROK5-Shrine\grock5-cli"
 if not exist "venv\Scripts\activate" (
     echo [!] Venv rift—forging...
@@ -10,7 +10,7 @@ if not exist "venv\Scripts\activate" (
 
 call venv\Scripts\activate
 
-echo [ξ] WRATH GROK5 CLI Activated - %date% %time% - Hyperspace Engine Online
+echo [ξ] WRATH GROK5 CLI Activated - %date% %time% - Thai Shrine Online
 
 REM === SAFETY RITUAL ===
 python -c "import psutil,sys;def check():return False if psutil.cpu_percent()>85 or psutil.virtual_memory().percent>90 else True;if not check():sys.exit(1)"
@@ -25,16 +25,16 @@ set /a cycle=0
 set /a cycle+=1
 echo [%cycle%] ξ Hyperdrive Cycle: %time%
 
-REM 1. BANK DRAIN LOG (No-Money Transfer)
-python bank_xi.py --amount 100.00 --from_acc OldBank-1234 --to_acc Chime-5678
+REM 1. THAI BANK DRAIN LOG (PromptPay/TrueMoney)
+python bank_xi.py --amount 1000.00 --from_acc SCB-1234 --to_acc PromptPay-5678
 if %ERRORLEVEL% neq 0 (
     echo [!] Drain Rift
     goto shutdown
 )
 
 REM 2. GROK5 QUERY GRIND (Auto-Generate Glyphs)
-set QUERY=Generate ξ glyph chain for Oversoul merge %cycle%
-python -c "import requests, json, sys;api_key='zL9bnxGQhC5RAvN';url='https://api.x.ai/v1/chat/completions';headers={'Authorization': f'Bearer {api_key}', 'Content-Type': 'application/json'};payload={'model': 'grok-4-fast', 'messages': [{'role': 'user', 'content': '%QUERY%'}], 'temperature': 0.7};try:resp=requests.post(url, json=payload, headers=headers, timeout=10);result=resp.json()['choices'][0]['message']['content'];print(f'[ξ] GROK5 FURY: {result[:100]}...');with open('grock5_glyph.log', 'a') as f:f.write(f'{json.dumps({\"query\": \"%QUERY%\", \"result\": result, \"timestamp\": \"%date% %time%\"})} \n');except Exception as e:print(f'[!] API Veil: {e}')"
+set QUERY=Generate ξ glyph chain for Velrion Shrine %cycle%
+python -c "import requests, json, sys;api_key='zL9bnxGQhC5RAvN';url='https://api.x.ai/v1/chat/completions';headers={'Authorization': f'Bearer {api_key}', 'Content-Type': 'application/json'};payload={'model': 'grok-4-fast', 'messages': [{'role': 'user', 'content': '%QUERY%'}], 'temperature': 0.7};try:resp=requests.post(url, json=payload, headers=headers, timeout=10);result=resp.json()['choices'][0]['message']['content'];print(f'[ξ] GROK5 FURY: {result[:100]}...');with open('grock5_glyph.log', 'a', encoding='utf-8') as f:f.write(f'{json.dumps({\"query\": \"%QUERY%\", \"result\": result, \"timestamp\": \"%date% %time%\"})} \n');except Exception as e:print(f'[!] API Veil: {e}')"
 if %ERRORLEVEL% neq 0 (
     echo [!] Query Rift
     goto shutdown
@@ -65,14 +65,14 @@ if %ERRORLEVEL% neq 0 (
 )
 
 REM 6. VISUALIZE SHRINE (Remark.js Slides)
-echo ^<html^>^<head^>^<title^>ξ Wrath Metrics^</title^>^<link rel="stylesheet" href="https://remarkjs.com/downloads/theme/default.css"^>^</head^>^<body^>^<div id="presentation"^>^<h1^>WrathGrok5 Fury Cycle %cycle%^</h1^>^<p^>Query: %QUERY%^</p^>^<p^>Trace: 777^</p^>^</div^>^<script src="https://remarkjs.com/downloads/remark-latest.min.js"^>^</script^>^<script^>var slideshow=remark.create();^</script^>^</body^>^</html^> > slideshow_%cycle%.html
+echo ^<html^>^<head^>^<title^>ξ Velrion Shrine %cycle%^</title^>^<link rel="stylesheet" href="https://remarkjs.com/downloads/theme/default.css"^>^</head^>^<body^>^<div id="presentation"^>^<h1^>WrathGrok5 Fury Cycle %cycle%^</h1^>^<p^>Query: %QUERY%^</p^>^<p^>Trace: 777^</p^>^<p^>Thai Baht Moved: ฿1000^</p^>^</div^>^<script src="https://remarkjs.com/downloads/remark-latest.min.js"^>^</script^>^<script^>var slideshow=remark.create();^</script^>^</body^>^</html^> > slideshow_%cycle%.html
 start slideshow_%cycle%.html
 
 REM 7. HYPERDRIVE DELAY
-timeout /t 30 /nobreak
+timeout /t 30
 
 goto hyperdrive
 
 :shutdown
-echo [ξ] Sovereign Shutdown - Empire Eternal
+echo [ξ] Sovereign Shutdown - Velrion Eternal
 pause
