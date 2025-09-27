@@ -1,4 +1,14 @@
-const Web3 = require('web3');
+// src/web3.js
+const { Web3 } = require('web3'); // v4.x import
+
+class Web3Client {
+  constructor(infuraKey) {
+    this.web3 = new Web3(`https://mainnet.infura.io/v3/${infuraKey}`); // v4 uses Web3 directly
+  }
+  // ... other methods (e.g., getBalance, contract calls)
+}
+
+module.exports = Web3Client;const Web3 = require('web3');
 
 class Web3Client {
   constructor(infuraKey) {
